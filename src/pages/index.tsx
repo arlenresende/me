@@ -1,9 +1,9 @@
+import {
+  CallSection,
+  ContentCallSection,
+  TerminalSection,
+} from '@/styles/pages/home'
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -14,110 +14,80 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
+      <CallSection>
+        <ContentCallSection>
+          <h1>
+            Hello, I am <br />
+            <span>&#123;Arlen Resende&#125;</span>
+            <br />a full-stack developer
+          </h1>
           <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
+            &#123; ... With almost 10 years of experience in technologies such
+            as Node.js, React, PHP, and Liquid. Throughout my career, I have had
+            the opportunity to work on challenging and complex projects, which
+            has allowed me to acquire strong skills in building scalable and
+            high-performance web applications.&#125;
           </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+        </ContentCallSection>
+        <TerminalSection>
+          <div className="terminal-window">
+            <div className="terminal-header">
+              <div className="terminal-button green"></div>
+              <div className="terminal-button yellow"></div>
+              <div className="terminal-button red"></div>
+            </div>
+            <div className="terminal-body">
+              <div className="prompt">
+                <div>
+                  <span className="title">
+                    &#x276F; ArlenResende.currentLocation
+                  </span>
+                  <span className="content">
+                    &#x22;Resende Costa, Minas Gerais - Brazil&#x22;
+                  </span>
+                </div>
+                <div>
+                  <span className="title">
+                    &#x276F; ArlenResende.contactInfo
+                  </span>
+                  <span className="content">
+                    &#x22;arlenaraujo12@gmail.com&#x22;
+                  </span>
+                </div>
+                <div>
+                  <span className="title">&#x276F; ArlenResende.resume</span>
+                  <span className="content">
+                    &#x22;
+                    <a href="" target="_blank">
+                      arlenresende.pdf
+                    </a>
+                    &#x22;
+                  </span>
+                </div>
+                <div>
+                  <span className="title">&#x276F; ArlenResende.interests</span>
+                  <span className="content">
+                    [&#x22;Football Soccer&#x22;,&#x22; Design&#x22;,&#x22;
+                    Guitar Player&#x22;]
+                  </span>
+                </div>
+                <div>
+                  <span className="title">&#x276F; ArlenResende.skills</span>
+                  <span className="content">
+                    [&#x22;JavaScript&#x22;, &#x22;React&#x22;, &#x22;React
+                    native&#x22;, &#x22;NextJs&#x22;, &#x22;Node&#x22;,
+                    &#x22;PHP&#x22;, &#x22;Liquid&#x22;,
+                    &#x22;HTML&#x22;,&#x22;Css&#x22;,&#x22;Git&#x22;]
+                  </span>
+                </div>
+                <div>
+                  <span className="title">&#x276F;</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
-            <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+        </TerminalSection>
+      </CallSection>
     </>
   )
 }
