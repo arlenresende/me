@@ -6,6 +6,8 @@ import { RichText } from 'prismic-dom'
 import Head from 'next/head'
 import Image from 'next/legacy/image'
 
+import { ParsedUrlQuery } from 'querystring'
+
 interface PostProps {
   post: {
     slug: string
@@ -15,6 +17,10 @@ interface PostProps {
     updatedAt: string
     last_publication_date: string
   }
+}
+
+interface IParams extends ParsedUrlQuery {
+  slug: string
 }
 
 export default function Post({ post }: PostProps) {
@@ -53,11 +59,8 @@ export default function Post({ post }: PostProps) {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async ({
-  req,
-  params,
-}) => {
-  const { slug } = params
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const { slug } = params as IParams
 
   const response = await client.getByUID('posts', String(slug))
 
